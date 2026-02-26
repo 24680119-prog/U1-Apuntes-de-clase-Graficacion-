@@ -235,14 +235,107 @@ En fractales más avanzados como el Conjunto de Mandelbrot, la iteración se rea
 Z (n + 1)= Z^2 + C
 Zn es el número complejo en la iteración n.
 
-C es un número complejo constante que define la forma del fractal.
+-C es un número complejo constante que define la forma del fractal.
 
-Cada punto del plano complejo se analiza para ver si “escapa” hacia el infinito o permanece dentro de un límite.
+-Cada punto del plano complejo se analiza para ver si “escapa” hacia el infinito o permanece dentro de un límite.
 
-Después de muchas iteraciones, los puntos que no escapan forman el gráfico fractal.
+-Después de muchas iteraciones, los puntos que no escapan forman el gráfico fractal.
 
 
 
+## Modelos del color: RBG, CMY, HSV y HSL.
+
+Los modelos de color son representaciones matemáticas que permiten describir y manipular colores de manera digital. Son fundamentales en graficación por computadora, diseño, animación y edición de imágenes, ya que permiten generar, mezclar y reproducir colores de forma precisa en pantallas o impresiones. Los más comunes son RGB, CMY/CMYK, HSV y HSL.
+
+**1. Modelo RGB (Red, Green, Blue)**
+
+Es un modelo de color aditivo, lo que significa que los colores se forman sumando luz de tres colores primarios: rojo, verde y azul. Cuando se combinan al máximo, se obtiene blanco; cuando están ausentes, se obtiene negro. Cada píxel en una pantalla digital mezcla diferentes intensidades de estos tres colores para producir cualquier color visible. Se suele usar un rango de 0 a 255 para cada componente, lo que permite más de 16 millones de combinaciones.
+
+
+**Componentes:**
+-Rojo (R)
+
+-Verde (G)
+
+-Azul (B) 
+Usos:
+
+-Pantallas de computadoras, televisores y dispositivos móviles.
+
+-Software de edición digital como Photoshop y Blender.
+
+-Creación de animaciones y efectos visuales en tiempo real.
+
+**2. Modelo CMY / CMYK**
+
+Es un modelo sustractivo, usado principalmente en impresión a color, donde los colores se generan restando luz de un fondo blanco mediante pigmentos. Los colores primarios son: Cian (C), Magenta (M) y Amarillo (Y).
+
+•CMYK añade la K (Key o negro) para obtener un negro más profundo, ya que la combinación de C, M y Y no produce un negro puro.
+
+**Cómo funciona**
+Cada tinta absorbe (sustrae) ciertas longitudes de onda:
+
+-Cian bloquea el rojo.
+
+-Magenta bloquea el verde.
+
+-Amarillo bloquea el azul.
+
+**Usos:**
+-Impresión profesional en papel, revistas, carteles y empaques.
+
+-Diseño gráfico para medios físicos.
+
+**3. Modelo HSV (Hue, Saturation, Value)**
+
+También conocido como HSB (Hue, Saturation, Brightness), está basado en cómo percibe el ojo humano los colores, separando el matiz, la saturación y el valor de brillo.Se visualiza como una ruleta de colores: el matiz se elige en el círculo, y saturación y brillo se ajustan en un triángulo interno o barra de control. Esto facilita seleccionar colores intuitivamente según la percepción humana.
+
+
+**Componentes:**
+-Hue (Matiz): Tipo de color (rojo, verde, azul, etc.) representado en un círculo de 0 a 360°.
+
+-Saturation (Saturación): Intensidad del color; del gris (0%) al color puro (100%).
+
+-Value (Valor o Brillo): Claridad del color; del negro (0%) al color máximo (100%).
+
+Usos:
+
+-Diseño gráfico y edición de imágenes.
+
+-Aplicaciones de pintura digital y animación.
+
+-Software de selección de color en interfaces y videojuegos.
+
+**4. Modelo HSL (Hue, Saturation, Lightness)**
+
+Similar al HSV, pero en lugar de “Value” usa Lightness (Luminosidad). También se le llama HSI (Hue, Saturation, Intensity). Representa el color según cómo percibe el ojo su intensidad y claridad.
+
+**Componentes:**
+
+-Hue (Matiz): Tipo de color, igual que HSV.
+
+-Saturation (Saturación): Intensidad del color.
+
+-Lightness (Luminosidad): Claridad, desde negro hasta blanco pasando por el color puro.
+
+**Cómo funciona:**
+Se puede visualizar como un cono doble o un doble hexágono, donde:
+
+-El eje central conecta blanco y negro.
+
+-El ángulo determina el matiz.
+
+-La distancia al eje central determina la saturación.
+
+**Usos:**
+-Software de diseño y modelado 3D, como Blender o 3ds Max.
+
+-Edición de imágenes para ajustar luz y color de manera perceptiva.
+
+-Experiencias de realidad virtual y aumentada donde el control del brillo es importante.
+
+
+## Ejemplo de cubo con sombras y colores en blender 
 
 
 
