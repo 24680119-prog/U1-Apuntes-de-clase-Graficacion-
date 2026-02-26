@@ -435,6 +435,146 @@ Cuando se realizo el cubo en Blender y se asigno un color diferente a cada una d
 
 ## Representación y trazo de líneas y polígonos
 
+**Representación de Polígonos**
+Un polígono es una figura geométrica plana formada por una secuencia de segmentos rectos que se unen en sus extremos y forman una figura cerrada. Para que exista un polígono, el número de lados debe ser mayor o igual a tres.
 
+**Elementos principales de un polígono**
+
+-Lados: Son los segmentos rectos que delimitan la figura.
+
+-Vértices: Son los puntos donde se unen dos lados consecutivos.
+
+-Ángulos interiores: Son los ángulos formados por dos lados que comparten un mismo vértice.
+En graficación por computadora, los polígonos son fundamentales porque prácticamente cualquier objeto tridimensional puede descomponerse en polígonos más pequeños, generalmente triángulos o cuadriláteros.
+
+Un polígono puede ser:
+
+-Regular: Todos sus lados y ángulos son iguales.
+
+-Irregular: Sus lados y ángulos no son todos iguales.
+
+Desde un punto de vista matemático más amplio, el polígono es el caso bidimensional de un politopo, que es una figura geométrica definida en cualquier número de dimensiones. En dos dimensiones se tienen polígonos, en tres dimensiones poliedros y así sucesivamente.
+
+En graficación digital, la representación básica de una imagen se construye a partir de conjuntos de polígonos definidos por sus vértices. Estos vértices se almacenan en listas ordenadas, lo que permite al sistema reconstruir la figura conectando los puntos en el orden correcto.
+
+**Representación de Líneas**
+
+Una línea en gráficos por computadora se define mediante dos puntos:
+
+-Punto inicial: (x₀, y₀)
+
+-Punto final: (x₁, y₁)
+
+El objetivo del trazo de una línea no es dibujar una línea matemática continua (ya que la pantalla está formada por píxeles), sino determinar qué píxeles son los más cercanos a la línea ideal para que visualmente parezca recta. Debido a que la pantalla funciona como una cuadrícula discreta de píxeles, se utilizan algoritmos específicos para decidir qué píxeles encender.
+
+**Algoritmos para el Trazo de Líneas**
+
+Algoritmo DDA (Digital Differential Analyzer)
+
+El algoritmo DDA es uno de los métodos más sencillos para dibujar líneas.
+
+Características principales:
+
+-Calcula la pendiente de la línea.
+
+-Determina los puntos intermedios utilizando incrementos pequeños.
+
+-Utiliza operaciones con números decimales (flotantes).
+
+-Es fácil de implementar.
+
+-Puede presentar pequeños errores de redondeo.
+
+-Es menos eficiente que otros métodos más avanzados.
+
+Este algoritmo fue muy importante en los primeros sistemas gráficos.
+
+**Algoritmo de Bresenham**
+
+Es el algoritmo más utilizado en sistemas gráficos debido a su eficiencia.
+
+Características principales:
+-Solo utiliza operaciones con números enteros.
+
+-No requiere divisiones ni cálculos con decimales.
+
+-Se basa en un parámetro de decisión para elegir el píxel más cercano a la línea ideal.
+
+-Es más rápido y más preciso que el DDA.
+
+-Reduce errores de redondeo.
+
+Por su eficiencia, el algoritmo de Bresenham ha sido ampliamente utilizado en hardware y software gráfico.
+
+**Representación y Trazo de Polígonos*+
+
+Representación
+
+La forma más común de representar un polígono en graficación es mediante una lista ordenada de vértices.
+
+Por ejemplo:
+
+-Un triángulo → se representa con tres vértices: P1, P2, P3.
+
+-Un cuadrilátero → cuatro vértices.
+
+El orden es importante, porque determina cómo se conectan las aristas y cómo se calcula el interior de la figura.
+
+
+**Trazo del Contorno**
+
+Para dibujar el contorno de un polígono:
+
+1.Se toma el primer vértice.
+
+2.Se traza una línea hasta el segundo.
+
+3.Luego del segundo al tercero y así sucesivamente.
+
+4.Finalmente se conecta el último vértice con el primero.
+
+Cada uno de estos segmentos se dibuja utilizando un algoritmo de línea, como el de Bresenham.
+
+**Relleno de Polígonos**
+
+Una vez dibujado el contorno, muchas veces se necesita rellenar el interior con un color.
+
+Existen diferentes métodos:
+
+Algoritmo de Relleno por Borde (Flood Fill)
+
+1.Comienza desde un punto interior del polígono.
+
+2.Va pintando píxeles vecinos.
+
+3.Se detiene cuando encuentra el color del borde.
+
+4.Es sencillo pero puede ser costoso si el área es grande.
+
+**Algoritmo Scan-line**
+
+Es más eficiente y ampliamente utilizado.
+
+Funcionamiento general:
+1.Recorre la figura línea horizontal por línea horizontal.
+
+2.Calcula los puntos donde esa línea intersecta los bordes del polígono.
+
+3.Rellena los píxeles entre pares de intersecciones.
+
+Este método es más rápido y se usa en sistemas de renderizado
+
+## Ejemplo 
+
+**Poligono**
+<img width="1492" height="761" alt="image" src="https://github.com/user-attachments/assets/a56c58c0-6ec4-4e3f-b50a-2e992dff9b8c" />
+
+
+Al ejecutarse el programa, se genera en pantalla un polígono regular en este caso un hexágono ubicado en el plano bidimensional. La figura no aparece como una forma completa desde el inicio, sino que el sistema la construye a partir de puntos definidos matemáticamente en el espacio. Primero se determinan las posiciones exactas de los vértices en el plano cartesiano y luego se trazan líneas que conectan cada vértice con el siguiente hasta cerrar la figura. Lo que se observa visualmente como un polígono es en realidad el resultado de unir segmentos rectos entre puntos específicos. Esto demuestra que en la graficación por computadora las figuras se representan mediante coordenadas y se trazan conectando esos puntos con líneas, confirmando que la representación y el trazo de polígonos se basa en la definición de vértices y aristas que conforman la estructura geométrica visible en pantalla.
+
+
+<img width="1466" height="782" alt="image" src="https://github.com/user-attachments/assets/4b1ca232-9757-4317-8a00-003e6d799dd8" />
+
+Al ejecutarse el programa, en la pantalla se genera un conjunto de círculos organizados como se muestra en la imagen, aunque visualmente se observan figuras circulares, en realidad cada círculo está compuesto por múltiples vértices conectados por segmentos rectos, formando un polígono de muchos lados. Esto demuestra que en la graficación computacional las figuras curvas se representan mediante aproximaciones poligonales. Además, cada figura se posiciona en coordenadas específicas del plano cartesiano, lo que evidencia el proceso de representación geométrica mediante puntos (vértices) y su posterior trazo al unirlos con líneas. En consecuencia, la ejecución del programa confirma que toda figura gráfica en un entorno digital se construye a partir de la definición matemática de vértices y del trazo de segmentos que forman polígonos, lo cual constituye la base fundamental de la representación y el trazado en la graficación por computadora.
 
 
