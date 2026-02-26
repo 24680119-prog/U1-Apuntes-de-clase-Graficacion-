@@ -431,7 +431,9 @@ Comprobaremos cómo se ven los colores aplicados en el cubo y haremos ajustes si
 
 <img width="1073" height="496" alt="image" src="https://github.com/user-attachments/assets/eb0e1a07-4429-4180-8b57-6b8cf78184ec" />
 
+Cuando se realizo el cubo en Blender y se asigno un color diferente a cada una de sus caras, se puso en práctica de forma directa los modelos de color, al seleccionar los colores desde la rueda cromática, trabajé con un sistema basado en componentes como matiz, saturación y brillo, característicos de modelos perceptivos como HSV o HSL, los cuales facilitan elegir visualmente el tono y la intensidad del color. Sin embargo, aunque yo elegía el color de manera intuitiva, Blender convertía automáticamente esa selección en valores del modelo RGB, ya que el programa muestra los colores mediante luz en la pantalla, utilizando la combinación aditiva de rojo, verde y azul. De esta manera, la práctica con el cubo demuestra cómo los modelos de color no son solo conceptos teóricos, sino que se aplican directamente en la graficación digital para representar y visualizar correctamente los colores en un entorno tridimensional.
 
+## Representación y trazo de líneas y polígonos
 
 
 
