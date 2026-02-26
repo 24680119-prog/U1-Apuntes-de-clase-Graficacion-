@@ -577,4 +577,5 @@ Al ejecutarse el programa, se genera en pantalla un polígono regular en este ca
 
 Al ejecutarse el programa, en la pantalla se genera un conjunto de círculos organizados como se muestra en la imagen, aunque visualmente se observan figuras circulares, en realidad cada círculo está compuesto por múltiples vértices conectados por segmentos rectos, formando un polígono de muchos lados. Esto demuestra que en la graficación computacional las figuras curvas se representan mediante aproximaciones poligonales. Además, cada figura se posiciona en coordenadas específicas del plano cartesiano, lo que evidencia el proceso de representación geométrica mediante puntos (vértices) y su posterior trazo al unirlos con líneas. En consecuencia, la ejecución del programa confirma que toda figura gráfica en un entorno digital se construye a partir de la definición matemática de vértices y del trazo de segmentos que forman polígonos, lo cual constituye la base fundamental de la representación y el trazado en la graficación por computadora.
 
+## Procesamiento de mapas de bits 
 
