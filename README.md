@@ -191,7 +191,7 @@ La geometría fractal, también llamada “geometría de la naturaleza”, descr
 
 -Fractales no lineales: Se generan mediante distorsiones complejas, como el Conjunto de Mandelbrot o el Conjunto de Julia, que utilizan números complejos y ecuaciones iterativas, por ejemplo:
 
-Z_{n+1} = Z_n^2 + C
+Z (n + 1)= Z^2 + C
 
 donde Z y C son números complejos.
 
@@ -232,7 +232,7 @@ Ejemplo: Triángulo de Sierpinski
 
 En fractales más avanzados como el Conjunto de Mandelbrot, la iteración se realiza con números complejos:
 
-z n + 1 = z^2 + C
+Z (n + 1)= Z^2 + C
 Zn es el número complejo en la iteración n.
 
 C es un número complejo constante que define la forma del fractal.
