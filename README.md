@@ -1,4 +1,4 @@
-## Introduccion a la graficacion por computadora
+## Introduccion a la graficacion por computadora.
 
 ## Historia y evoluacion de la graficacion por computadora
 
