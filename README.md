@@ -1,4 +1,5 @@
-## Introduccion a la graficacion por computadora.
+## Unidad 1 : Introduccion a la graficacion por computadora.
+En el estudio de los gráficos digitales es fundamental comprender cómo se representan y construyen las imágenes dentro de un sistema computacional, a lo largo de estos temas se analizan los distintos métodos de representación gráfica, como los mapas de bits y los gráficos vectoriales, así como el trazo de líneas y polígonos que permiten formar figuras más complejas. También se estudian los modelos de color, que determinan cómo se almacenan y visualizan los colores en pantalla o en impresión. Todos estos elementos trabajan en conjunto para permitir la creación, manipulación y procesamiento de imágenes digitales, combinando principios matemáticos, geométricos y tecnológicos
 
 ## Historia y evoluacion de la graficacion por computadora
 
@@ -578,4 +579,198 @@ Al ejecutarse el programa, se genera en pantalla un polígono regular en este ca
 Al ejecutarse el programa, en la pantalla se genera un conjunto de círculos organizados como se muestra en la imagen, aunque visualmente se observan figuras circulares, en realidad cada círculo está compuesto por múltiples vértices conectados por segmentos rectos, formando un polígono de muchos lados. Esto demuestra que en la graficación computacional las figuras curvas se representan mediante aproximaciones poligonales. Además, cada figura se posiciona en coordenadas específicas del plano cartesiano, lo que evidencia el proceso de representación geométrica mediante puntos (vértices) y su posterior trazo al unirlos con líneas. En consecuencia, la ejecución del programa confirma que toda figura gráfica en un entorno digital se construye a partir de la definición matemática de vértices y del trazo de segmentos que forman polígonos, lo cual constituye la base fundamental de la representación y el trazado en la graficación por computadora.
 
 ## Procesamiento de mapas de bits 
+
+Un mapa de bits, también llamado imagen raster o imagen matricial, es una estructura de datos que representa una imagen mediante una rejilla rectangular formada por pequeñas unidades llamadas píxeles. Cada píxel (Picture Element) contiene información específica de color y luminancia, y la combinación organizada de millones de estos píxeles produce la imagen que vemos en pantalla o en papel.
+
+A diferencia de los gráficos vectoriales, que definen las imágenes mediante funciones matemáticas, curvas y polígonos, los mapas de bits almacenan directamente el color de cada punto de la matriz. Esto significa que la imagen no está compuesta por objetos geométricos editables, sino por información individual de cada píxel.
+
+El píxel es una unidad de información, no una unidad de medida fija. Su tamaño físico depende del dispositivo de salida. Puede medir fracciones de milímetro en una pantalla de alta resolución o varios centímetros en una impresión ampliada.
+
+**Formación y creación de imágenes de mapa de bits**
+
+Las imágenes de mapa de bits se generan normalmente mediante:
+
+-Escáneres, que digitalizan imágenes en papel.
+
+-Cámaras digitales, que capturan fotografías.
+
+-Programas de diseño gráfico.
+
+-Capturas de pantalla.
+	
+-Recursos descargados de Internet.
+
+Cada imagen raster está diseñada para una resolución y tamaño determinados. Cuando se modifica su tamaño, no se transforman objetos individuales, sino que se modifican grupos de píxeles. Por esta razón:
+
+-Si la imagen se reduce, puede perder detalles finos.
+
+-Si se amplía, puede aparecer pixelación.
+
+-Puede producirse el efecto de “dientes de sierra”.
+
+La calidad depende directamente de la resolución con la que fue creada.
+
+**Resolución de una imagen de mapa de bits**
+
+La resolución es la cantidad de píxeles contenidos por unidad de longitud. Generalmente se mide en píxeles por pulgada (ppi o ppp).
+
+Es importante entender que la resolución no es un concepto único, ya que puede referirse a distintos contextos:
+
+-Resolución del archivo digital.
+
+-Resolución de pantalla.
+
+-Resolución de impresión.
+
+-Resolución de escaneado.
+
+La resolución del archivo digital se refiere a la densidad de píxeles en la imagen. Cuantos más píxeles por pulgada tenga:
+
+-Mayor será la calidad.
+
+-Mayor será el nivel de detalle.
+
+-Más suave será la transición de colores.
+	
+-Mayor será el tamaño del archivo en kilobytes.
+
+La resolución de pantalla depende del monitor. Si un monitor tiene más píxeles por pulgada, los píxeles serán más pequeños y la imagen se verá más definida.
+
+En impresión, la resolución adecuada suele estar entre 150 y 300 ppi para trabajos en cuatricromía (CMYK). Resoluciones mayores no siempre significan mejor calidad, ya que puede superarse la capacidad del medio de reproducción.
+
+Existe una relación directa entre resolución y tamaño físico. Si una imagen tiene 100 píxeles por pulgada, cada pulgada contendrá 100 píxeles. Si disminuye la resolución, los píxeles serán más grandes y la imagen ocupará más espacio físico.
+
+**Dimensiones de una imagen raster**
+
+Las dimensiones de una imagen de mapa de bits se expresan normalmente en píxeles (por ejemplo, 1920 × 1080). Sin embargo, cuando se define su resolución, también se establece el tamaño físico que tendrá al imprimirse.
+
+Los dispositivos de salida, como monitores o impresoras, trabajan en píxeles o puntos, no en centímetros absolutos. Por ello, el tamaño visual puede variar dependiendo de la resolución configurada.
+
+Para mantener la calidad al cambiar el tamaño de una imagen, es necesario conservar la cantidad total de información que contiene, es decir, el número total de bits almacenados.
+
+
+**Píxel y profundidad de color**
+
+El píxel es la unidad mínima que compone un mapa de bits. Cada píxel almacena información de color utilizando bits. La cantidad de bits asignados determina la profundidad de color.
+
+**Profundidades comunes:**
+
+**Imágenes de 1 bit por píxel**
+
+Cada píxel solo puede representar dos valores posibles (0 o 1). Esto genera imágenes en blanco y negro de alto contraste.
+
+**Imágenes en escala de grises (8 bits por píxel)**
+
+Cada píxel puede representar 256 niveles distintos de gris. Aunque parecen tener muchos tonos, solo existen 256 posibles valores.
+
+**Imágenes RGB o Lab (24 bits por píxel)**
+
+Cada píxel utiliza tres canales de color (rojo, verde y azul), cada uno con 8 bits. Esto permite representar más de 16 millones de colores diferentes.
+
+**Imágenes CMYK (32 bits por píxel)**
+
+Se asigna un byte a cada canal: cian, magenta, amarillo y negro. Es el sistema utilizado en impresión profesional.
+
+**Color indexado**
+
+Se utiliza una tabla de hasta 256 colores, y cada píxel referencia un color dentro de esa tabla.
+
+**Modos especiales**
+
+Incluyen imágenes con más canales, máscaras o mayor profundidad de bits, como las imágenes obtenidas en escaneos profesionales o archivos RAW.
+
+
+**Procesamiento de mapas de bits**
+
+El procesamiento de mapas de bits consiste en aplicar técnicas y algoritmos que modifican la información almacenada en los píxeles. Estas modificaciones pueden realizarse:
+
+-Sobre píxeles individuales.
+
+-Analizando grupos de píxeles vecinos.
+
+-Sobre canales de color específicos.
+
+Es la base de programas de edición como Photoshop.
+
+**Técnicas comunes de procesamiento**
+
+**Filtros y efectos**
+
+Los filtros alteran los valores de los píxeles para cambiar la apariencia visual de la imagen.
+
+Ejemplos:
+
+-Desenfoque (blur): promedia valores de píxeles vecinos.
+
+-Nitidez (sharpen): resalta bordes.
+
+-Relieve (emboss): simula efectos de luz y sombra.
+
+Estos efectos trabajan modificando matemáticamente los valores almacenados en la matriz.
+
+**Transformaciones geométricas**
+
+Permiten modificar la posición o forma de la imagen:
+
+-Rotación: gira la imagen alrededor de un punto.
+
+-Escalado: cambia el tamaño.
+
+-Traslación: desplaza la imagen.
+
+Al escalar, el sistema debe calcular nuevos píxeles mediante interpolación, lo que puede provocar pérdida de calidad.
+
+**Ajustes de color y brillo**
+
+Consisten en modificar los valores de los canales de color:
+
+-Brillo.
+
+-Contraste.
+
+-Saturación.
+
+-Balance de color.
+
+Cada ajuste implica alterar los datos almacenados en los píxeles.
+
+
+**Compresión**
+
+Reduce el tamaño del archivo para facilitar almacenamiento y transmisión.
+
+**Compresión con pérdida (JPEG):** Elimina parte de la información, reduciendo el tamaño pero afectando la calidad.
+
+**Compresión sin pérdida (PNG):**Reduce el tamaño sin eliminar datos, manteniendo la calidad original.
+
+**Conversión de formatos**: Consiste en transformar una imagen de un formato a otro.
+
+**Rasterización:** convertir un gráfico vectorial en mapa de bits.
+
+**Vectorización:**:transformar un mapa de bits en un gráfico vectorial.
+
+## Bibliografías
+
+Modelos de color RGB, CMY, HSV y HSL. (s. f.). https://graficaciontmmjc.blogspot.com/2019/03/modelos-de-color-rgb-cmy-hsv-y-hsl.html?m=1
+
+Client challenge. (s. f.). https://www.scribd.com/document/342484892/1-4-Aspectos-matematicos-de-la-graficacion-Geometria-Fractal
+
+Client challenge. (s. f.-c). https://www.slideshare.net/slideshow/1-3-aspectos-matematicos-de-la-graficacion-pdf/282295700
+
+Lara, J. G. (s. f.). Aplicaciones de graficación existentes. https://javiergarcialara.blogspot.com/2017/02/aplicaciones-de-graficacion-existentes.html?m=1
+
+Client challenge. (s. f.-d). https://www.slideshare.net/slideshow/1-2-areas-de-aplicacion-de-la-graficacion-por-computadora-pdf/282295469
+
+Unknown. (s. f.). ¿Que es la Graficación? Historia y Aplicaciones. https://oscarprzlopz.blogspot.com/2014/09/que-es-la-graficacion-historia-y.html?m=1
+
+Valdes, A. S. (2013, 11 septiembre). 1.1 Aplicaciones graficas por computadora. https://graficacionito.blogspot.com/2013/09/11-aplicaciones-graficas-por-computadora.html?m=1
+
+Timetoast. (1950). Timeline: Evolución de la computación gráfica. https://www.timetoast.com/timelines/evolucion-de-la-computacion-grafica-4ee074ee-05ff-4102-a6d3-5f36f05b5d8d
+
+Client challenge. (s. f.-e). https://www.slideshare.net/slideshow/imagen-mapa-de-bits-y-software-de-tratamiento/26963442
+
+Mapa de bits  | IDIS. (s. f.). https://proyectoidis.org/mapa-de-bits/
+
+Client challenge. (s. f.-f). https://www.slideshare.net/slideshow/1-6-procesamiento-de-mapas-de-bits-en-graficacion/282295902
+
 
