@@ -741,7 +741,7 @@ Reduce el tamaño del archivo para facilitar almacenamiento y transmisión.
 
 **Compresión con pérdida (JPEG):** Elimina parte de la información, reduciendo el tamaño pero afectando la calidad.
 
-**Compresión sin pérdida (PNG):**Reduce el tamaño sin eliminar datos, manteniendo la calidad original.
+**Compresión sin pérdida (PNG):** Reduce el tamaño sin eliminar datos, manteniendo la calidad original.
 
 **Conversión de formatos**: Consiste en transformar una imagen de un formato a otro.
 
