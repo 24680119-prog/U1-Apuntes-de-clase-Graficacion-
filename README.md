@@ -290,7 +290,6 @@ Cada tinta absorbe (sustrae) ciertas longitudes de onda:
 
 También conocido como HSB (Hue, Saturation, Brightness), está basado en cómo percibe el ojo humano los colores, separando el matiz, la saturación y el valor de brillo.Se visualiza como una ruleta de colores: el matiz se elige en el círculo, y saturación y brillo se ajustan en un triángulo interno o barra de control. Esto facilita seleccionar colores intuitivamente según la percepción humana.
 
-
 **Componentes:**
 -Hue (Matiz): Tipo de color (rojo, verde, azul, etc.) representado en un círculo de 0 a 360°.
 
@@ -335,7 +334,104 @@ Se puede visualizar como un cono doble o un doble hexágono, donde:
 -Experiencias de realidad virtual y aumentada donde el control del brillo es importante.
 
 
-## Ejemplo de cubo con sombras y colores en blender 
+## Ejemplo de cubo iluminado en blender
+
+**Paso 1: Preparar el cubo**
+Abriremos Blender y nos aseguraremos de tener un cubo como objeto base para trabajar, este cubo será nuestra referencia para aplicar los colores.
+
+1.Abrir Blender.
+
+2.Por defecto, Blender abre un cubo. Si no hay:
+
+3.Presiona Shift + A → Mesh → Cube para agregar uno.
+
+4.Selecciona el cubo haciendo clic sobre él (resaltado en naranja).
+
+5.Asegúrate de estar en Object Mode para poder seleccionarlo.
+
+**Paso 2: Entrar en modo edición (Edit Mode)**
+
+Cambiaremos a modo edición para poder seleccionar y trabajar con las caras, aristas o vértices del cubo.
+
+1.En la barra superior del 3D Viewport, cambia de Object Mode a Edit Mode.
+
+2.Alternativamente, presiona Tab en el teclado.
+
+3.Ventana explicativa:
+
+4.Edit Mode te permite manipular la geometría interna del cubo.
+
+5.En Object Mode, solo puedes mover, escalar o rotar el cubo completo.
+
+**Paso 3: Activar la selección de caras**
+
+Indicaremos que queremos seleccionar caras y no vértices ni aristas, porque el color se aplicará por cara.
+
+1.En la parte superior izquierda del 3D Viewport, busca los iconos de selección: Vertex, Edge, Face.
+
+2.Selecciona Face Select (icono de cuadrado) permite seleccionar y manipular caras individuales del cubo.
+
+3.Haz clic en la cara que quieras colorear primero.
+
+**Paso 4: Activar la vista de materiales (Viewport Shading)**
+
+Cambiaremos la vista del cubo para ver cómo se aplican los colores mientras trabajamos.
+
+1.En la esquina superior derecha del 3D Viewport hay varios iconos de esfera.
+
+2.Selecciona Material Preview (esfera con sombreado), Material Preview muestra los materiales y colores aplicados en tiempo real, simulando la iluminación esto es útil para ver cómo se verá el color sin hacer un render completo.
+
+**Paso 5: Crear un nuevo material**
+
+Generaremos un color que luego aplicaremos a la cara seleccionada del cubo.
+
+1.Abrir Material Properties (icono de esfera roja en la barra derecha),  es donde se crean y editan los materiales, que incluyen colores, texturas, transparencia y más.
+
+2.Hacer clic en + New para crear un material nuevo.
+
+3.Cambiar el Base Color al color deseado (ejemplo: morado), la base Color es el color principal del material que se verá en la cara del cubo.
+
+**Paso 6: Asignar el material a la cara**
+
+Aplicaremos el material creado solo a la cara seleccionada.
+
+1.-Selecciona la cara del cubo que quieres colorear.
+
+2.-Asegúrate de tener seleccionado el material correcto en Material Properties.
+
+3.-Haz clic en Assign para aplicar el color a esa cara.
+
+4.-Ventana explicativa: El botón Assign asegura que el color se aplique solo a la selección actual, no a todo el cubo.
+
+**Paso 7: Repetir para otras caras**
+
+Aplicaremos diferentes colores a las demás caras usando nuevos materiales, cada material puede tener su propio color, textura o propiedades esto permite que un mismo cubo tenga varias caras de colores distintos. 
+Rendered View muestra cómo se verá el cubo con luz, sombras y materiales como si fuera un render final.
+
+1.Crear un nuevo material en Material Properties para el siguiente color (ejemplo: rosa).
+
+2.Seleccionar otra cara del cubo.
+
+3.Hacer clic en Assign.
+
+4.Repetir para otra cara con otro color (ejemplo: rojo).
+
+**Paso 8: Revisar el resultado*+
+Comprobaremos cómo se ven los colores aplicados en el cubo y haremos ajustes si es necesario.
+
+1.Cambiar a Material Preview o Rendered View (esfera a la derecha del Viewport Shading).
+
+2.Revisar que cada cara tenga el color deseado.
+
+3.Ajustar los colores si es necesario volviendo a Material Properties y modificando Base Color.
+
+
+<img width="878" height="492" alt="image" src="https://github.com/user-attachments/assets/7651bd54-6bf0-4b07-8437-3db4ba155b56" />
+
+
+<img width="1073" height="496" alt="image" src="https://github.com/user-attachments/assets/eb0e1a07-4429-4180-8b57-6b8cf78184ec" />
+
+
 
 
 
