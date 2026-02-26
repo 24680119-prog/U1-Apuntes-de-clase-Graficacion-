@@ -217,9 +217,29 @@ La graficación matemática permite:
 
 **Iteraciones y Procesos Matemáticos**
 
-Los fractales se generan mediante procesos iterativos, donde un dato inicial alimenta un “cerebro matemático” que produce un nuevo dato. Este resultado se vuelve a procesar, y así sucesivamente, creando estructuras infinitamente complejas como el triángulo de Sierpinski.
+En la graficación por computadora, los fractales no se dibujan a mano, sino que se generan mediante procesos iterativos controlados por algoritmos. Esto significa que el computador aplica una misma operación repetidamente, cada vez usando como entrada el resultado obtenido en la iteración anterior. Así se construyen patrones infinitamente complejos a partir de reglas matemáticas simples.
+Ejemplo: Triángulo de Sierpinski
 
+1.Comienza con un triángulo equilátero grande.
 
+2.Se dibuja un triángulo más pequeño dentro del primero, siguiendo ciertas reglas (por ejemplo, conectando los puntos medios de los lados).
+
+3.Cada nuevo triángulo se vuelve a procesar, generando triángulos aún más pequeños dentro de cada uno.
+
+4.Este proceso se repite infinitamente, creando un patrón fractal que parece complejo pero se genera a partir de reglas simples.
+
+**Iteración con Números Complejos: Conjunto de Mandelbrot**
+
+En fractales más avanzados como el Conjunto de Mandelbrot, la iteración se realiza con números complejos:
+
+z n + 1 = z^2 + C
+Zn es el número complejo en la iteración n.
+
+C es un número complejo constante que define la forma del fractal.
+
+Cada punto del plano complejo se analiza para ver si “escapa” hacia el infinito o permanece dentro de un límite.
+
+Después de muchas iteraciones, los puntos que no escapan forman el gráfico fractal.
 
 
 
